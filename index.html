@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClimbFour — four-bar pre-chorus climb</title>
+    <meta name="description" content="Four-bar live pre-chorus climb desk. FluidR3 chairs so the verse walks up into the hook instead of slamming into it." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="top">
+      <p class="eyebrow">Workin' With AI · The Forge Stack</p>
+      <h1>ClimbFour <span>1.0.0</span></h1>
+      <p class="lede">Your hook is finished. Your verse is finished. The chorus still lands like a brick because nothing climbs into it. ClimbFour is a four-bar pre-chorus desk with live FluidR3 chairs — piano, nylon guitar, acoustic bass, and strings — so the last line of the verse can walk up instead of dump.</p>
+      <p class="not">Not a fade (FadeEight). Not an amen tag (AmenFour). Not a loop seam (SeamFour). Not a verse writer (VerseEight). This is only the climb.</p>
+    </header>
+    <main>
+      <section class="desk">
+        <div class="row">
+          <label>Key<select id="key"><option>C</option><option>G</option><option selected>D</option><option>A</option><option>E</option><option>F</option><option>Bb</option></select></label>
+          <label>Mode<select id="mode"><option value="major" selected>Major</option><option value="minor">Minor</option></select></label>
+          <label>BPM<input id="bpm" type="number" min="72" max="140" value="96" /></label>
+          <label>Climb recipe<select id="recipe"><option value="iv-V-Iprep">iv → V → I-prep → V</option><option value="ii-IV-V" selected>ii → IV → V/V → V</option><option value="vi-IV-I-V">vi → IV → I → V</option><option value="pedal">I-pedal rise (bass walks)</option></select></label>
+        </div>
+        <div class="chairs" id="chairs"></div>
+        <div class="transport">
+          <button id="arm" type="button">Arm FluidR3 chairs</button>
+          <button id="play" type="button" disabled>Play 4-bar climb</button>
+          <button id="stop" type="button" disabled>Stop</button>
+          <p id="status">Chairs cold. Arm once — samples load from FluidR3_GM.</p>
+        </div>
+        <ol class="bars" id="bars"></ol>
+      </section>
+      <aside class="copy">
+        <h2>Who this is for</h2>
+        <p>Bedroom producers and AI-music finishers who already have a hook and a verse and keep bouncing songs that slam from verse into chorus with no pre-chorus lift.</p>
+        <h2>What you export</h2>
+        <p>A four-bar harmonic map you can play under the last line of the verse. Live instrument chairs only.</p>
+        <p class="price">Recommended: <strong>$19 one-time</strong> on Gumroad. Bundle later into Forge Pass ($24/mo).</p>
+      </aside>
+    </main>
+    <footer><p>ClimbFour · workinwithai-create · FluidR3_GM live chairs · not a DAW</p></footer>
+    <script src="https://unpkg.com/soundfont-player@0.12.0/dist/soundfont-player.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
